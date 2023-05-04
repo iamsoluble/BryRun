@@ -82,3 +82,12 @@ img {
 p {
   line-height: 1.6; /*Espaciado entre las líneas*/
 }
+
+svg {
+  width: 20px;
+  height: 20px;
+}
+
+.svg-close {
+  display: none;
+}
