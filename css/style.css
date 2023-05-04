@@ -1,4 +1,4 @@
-/*Custom Properties*/
+/****************-CUSTOM PROPERTIES-****************/
 :root {
   --primary-color: #4d52c5;
   --primary-alpha-color: rgba(77, 82, 197, 0.75);
@@ -17,9 +17,11 @@
   --white-alpha-color: rgba(255, 255, 255, 0.5);
   --black-alpha-color: rgba(0, 0, 0, 0.5);
   --font: "Montserrat", sans-serif;
+  --max-width: 1200px;
+  --header-height: 3rem;
 }
 
-/*Reset*/
+/****************-RESET-****************/
 html {
   box-sizing: border-box; /*El tamaño de la caja empieza desde el borde y no desde el contenido*/
   font-family: var(--font);
@@ -83,11 +85,86 @@ p {
   line-height: 1.6; /*Espaciado entre las líneas*/
 }
 
+/****************-UTILITIES-****************/
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--max-width);
+}
+
+/****************-Svg Properties (REUBICAR)-****************/
 svg {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: auto;
 }
 
 .svg-close {
   display: none;
+}
+
+/****************-SITE STYLES-****************/
+.header {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--second-color);
+}
+.header > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+  border-top: 6px solid var(--gray-dark-color);
+}
+.logo a {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 2rem;
+  text-decoration: none;
+}
+.logo .bry-color {
+  color: white;
+}
+
+/****************-COMPONENTS-****************/
+
+/****************-Menú-****************/
+.menu {
+  position: fixed;
+  left: 0;
+  bottom: var(--header-height);
+  border-top: 6px solid var(--primary-alpha-color);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--second-color);
+  opacity: 40;
+  /* pointer-events: none; */
+  transition: opacity 0.5s ease;
+}
+.menu a {
+  padding: 1rem;
+  font-size: 1.5;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: var(--third-color);
+}
+.menu a:hover {
+  color: var(--white-color);
+  background-color: var(--gray-dark-color);
+}
+
+.menu-btn {
+  outline: thin solid var(--second-color);
+  border: 0;
+  background-color: var(--second-color);
+  cursor: pointer;
+}
+
+.menu-btn svg {
+  fill: var(--third-alpha-color);
 }
