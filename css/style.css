@@ -16,7 +16,7 @@
   --text-color: #232323;
   --white-alpha-color: rgba(255, 255, 255, 0.5);
   --black-alpha-color: rgba(0, 0, 0, 0.5);
-  --font: "Montserrat", sans-serif;
+  --font: "Mona sans", sans-serif;
   --max-width: 1200px;
   --header-height: 3rem;
 }
@@ -116,14 +116,15 @@ svg {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 0.5rem;
+  padding-top: 0.4rem;
   border-top: 6px solid var(--gray-dark-color);
 }
 .logo a {
   color: var(--primary-color);
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.7rem;
   text-decoration: none;
+  padding-left: 0.5rem;
 }
 .logo .bry-color {
   color: white;
@@ -146,16 +147,19 @@ svg {
   transition: opacity 0.5s ease;
 }
 .menu a {
-  padding: 1rem;
-  font-size: 1.5;
-  font-weight: bold;
+  border-bottom: 0.01rem solid rgba(17, 13, 33, 0.276);
+  font-size: 1;
+  font-weight: 500;
+  margin: 0;
+  padding: 0.8rem;
   text-align: center;
   text-decoration: none;
-  color: var(--third-color);
+  color: var(--white-alpha-color);
 }
+
 .menu a:hover {
   color: var(--white-color);
-  background-color: var(--gray-dark-color);
+  background-color: var(--black-alpha-color);
 }
 
 .menu-btn {
@@ -166,5 +170,5 @@ svg {
 }
 
 .menu-btn svg {
-  fill: var(--third-alpha-color);
+  fill: var(--white-color);
 }
