@@ -156,6 +156,27 @@ svg {
   background-attachment: var(--hero-attachment);
 }
 
+.hero-image-opacity{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--hero-opacity-color);
+}
+
+.hero-image-title {
+  font-size: 7.5vw;
+  color: var(--primary-color)
+}
+
+.bry-color,
+.small-color{
+  color: var(--white-color)
+}
+
 /****************-Menú-****************/
 .menu {
   position: fixed;
