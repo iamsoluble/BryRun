@@ -11,6 +11,7 @@
   --gray-color: #d9d9d9;
   --gray-dark-color: #5a5a5a;
   --black-color: #000000;
+  --border-color: #06001A;
   --link-color: #4da279;
   --title-color: #343434;
   --text-color: #232323;
@@ -101,6 +102,15 @@ p {
   padding-right: 2rem;
 }
 
+.section-title {
+margin: 2rem 0 2rem 0; /*2rem arriba, 0 derecha, 2rem abajo, 0 izquierda*/
+border-left: 4px solid var(--primary-color); /*Borde solamente a la izquierda*/
+padding-left: .5rem;
+width: 250px;
+text-align: left;
+color: var(--title-color);
+}
+
 .text-center {
   text-align: center;
 }
@@ -177,6 +187,63 @@ margin-bottom: 2rem;
 .logo .bry-color {
   color: white;
 }
+
+/****************-Maquetado componente MOMENTS CARD-****************/
+.moments-card {
+  position: relative; /*Para luego posicionar de manera absoluta en relación a este contenedor al estado :hover*/
+  width: 100%;
+  margin: 0 auto; /*Le quitamos márgenes para que estén pegadas*/
+  display: block; /*Para que estén una debajo de la otra necesitamos que trabajen en bloque*/
+}
+.moments-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;/*Con esto evitamos que se pierda el aspecto si las imágenes no sos cuadradas, por ejemplo, como en este caso*/
+}
+
+.moments-card-info {
+  position: absolute;
+  /*Top y left 0 para que se posiciones junto a su elemento padre*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  background-color: var(--second-alpha-color);
+  color: var(--white-color);
+  opacity: 0; /*Para que no se vea hasta que nosotros decidamos luego en :hover*/
+  pointer-events: none; /*Para que deje de tener actividad mientras está oculta*/
+  transition: all 0.5 ease-in-out; /*Estilo de transición al aparecer/ocultarse (REPASAR transition)*/
+}
+
+/*Cuando moments-card esté en su estado :hover, a .moments-card-info le devolvemos la opacidad y su actividad*/
+.moments-card-info:hover .moments-card-info {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.moments-card-info > div {
+  padding: 1rem;
+  border: thin solid var(--white-alpha-color); /*Color de línea que se ve alrededor del párrafo*/
+  width: 100%;
+  height: 100%;
+}
+
+/****************-Maquetado responsivo sección MOMENTOS-****************/
+@media screen and (min-width: 768px) {
+  .moments > .container {
+    /*A la div .container dentro de .momentos le agregamos display grid y lo hacemos de 2 columnas*/
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    padding-top: 1rem;
+  }
+    /*Al título le decimos que ocupe 2 espacios desde donde está*/
+    .moments .section-title {
+      grid-column: span 2;
+    }
+}
+  
+
 
 /****************-Maquetado Escritorio-****************/
 @media screen and (min-width: 1024px) {
