@@ -155,7 +155,7 @@ svg {
 
 /****************-SITE STYLES-****************/
 .about {
-  padding-top: 2rem;
+  padding-top: 2.5rem;
 }
 
 .about > article {
@@ -186,6 +186,10 @@ margin-bottom: 2rem;
 }
 .logo .bry-color {
   color: white;
+}
+
+.moments {
+  padding-top: 0.1rem;
 }
 
 /****************-Maquetado componente MOMENTS CARD-****************/
