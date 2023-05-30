@@ -18,3 +18,4 @@
     $menu.classList.remove("is-active");
   });
 })(document);
+

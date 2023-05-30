@@ -38,7 +38,7 @@ html {
 
 body {
   margin: 0;
-  overflow-x: hidden; /*Qué pasa con lo que desborda el contenedor? hidden=oculta. (Evita barra de desplazamiento, por ejemplo) */
+  overflow-x: hidden;
   color: var(--text-color);
 }
 
@@ -87,6 +87,16 @@ p {
 }
 
 /****************-UTILITIES-****************/
+.avatar {
+  border-radius: 3%;
+  width: 500px;
+  height: 500px;
+}
+
+.text-first-color {
+  color: var(--primary-color);
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -110,6 +120,53 @@ width: 250px;
 text-align: left;
 color: var(--title-color);
 }
+
+/* Tabla */
+.competition-table {
+  border-collapse: collapse;
+  border: 2px solid black;
+  box-shadow: 3px 3px 4px var(--primary-alpha-color);
+  text-align: center;
+  width: 100%;
+  margin: 50px auto 0 auto;
+}
+
+.competition-table thead {
+  border: 1px solid var(--black-color);
+}
+
+.competition-table thead tr:first-child th {
+  border: 2px solid black;
+  padding: 1rem;
+}
+
+.competition-table tbody {
+  border: 1px solid var(--black-color);
+}
+
+tr {
+  transition: all ease-in-out 300ms;
+}
+
+.competition-table tbody>tr:hover {
+  background-color: var(--primary-alpha-color);
+  cursor: pointer;
+}
+
+.none-color {
+  background-color: var(--white-color);
+  padding: 1rem;
+}
+
+.gral-cat {
+  border: 2px solid black;
+  font-weight: bold;
+}
+
+
+
+
+
 
 .text-center {
   text-align: center;
@@ -192,6 +249,9 @@ margin-bottom: 2rem;
   padding-top: 0.1rem;
 }
 
+
+
+
 /****************-Maquetado componente MOMENTS CARD-****************/
 .moments-card {
   position: relative; /*Para luego posicionar de manera absoluta en relación a este contenedor al estado :hover*/
@@ -221,7 +281,7 @@ margin-bottom: 2rem;
 }
 
 /*Cuando moments-card esté en su estado :hover, a .moments-card-info le devolvemos la opacidad y su actividad*/
-.moments-card-info:hover .moments-card-info {
+.moments-card:hover .moments-card-info {
   opacity: 1;
   pointer-events: auto;
 }
@@ -246,7 +306,7 @@ margin-bottom: 2rem;
       grid-column: span 2;
     }
 }
-  
+
 
 
 /****************-Maquetado Escritorio-****************/
@@ -274,9 +334,18 @@ body section{
   padding-top: 3rem;
 }
 
+.moments .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.moments .section-title {
+  grid-column: span 3;
+}
+
 }
 
 /****************-COMPONENTS-****************/
+
 
 /****************-Hero Image-****************/
 .hero-image {
@@ -359,6 +428,7 @@ body section{
   opacity: 1;
   pointer-events: auto;
 }
+
 
 /****************-Menú Escritorio-****************/
 @media screen and (min-width: 1024px) {
