@@ -93,8 +93,25 @@ p {
   height: 500px;
 }
 
-.text-first-color {
-  color: var(--primary-color);
+.box-shadow-1 {
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, .25);
+}
+
+.btn {
+  display: inline-block;
+  border-left: 4px solid var(--primary-color); /*Borde solamente a la izquierda*/
+  border-radius: 0.16rem;
+  padding: 0.65rem 0rem 0.5rem 0;
+  width: 150px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--white-alpha-color);
+  background-color: var(--second-color);
+}
+
+.btn:hover {
+  opacity: 95%;
+  color: var(--gray-color);
 }
 
 .container {
@@ -113,19 +130,22 @@ p {
 }
 
 .section-title {
-margin: 2rem 0 2rem 0; /*2rem arriba, 0 derecha, 2rem abajo, 0 izquierda*/
-border-left: 4px solid var(--primary-color); /*Borde solamente a la izquierda*/
-padding-left: .5rem;
-width: 250px;
-text-align: left;
-color: var(--title-color);
+  margin: 2rem 0 2rem 0; /*2rem arriba, 0 derecha, 2rem abajo, 0 izquierda*/
+  border-left: 4px solid var(--primary-color); /*Borde solamente a la izquierda*/
+  padding-left: .5rem;
+  width: 250px;
+  text-align: left;
+  color: var(--title-color);
 }
 
+.text-first-color {
+  color: var(--primary-color);
+}
 /* Tabla */
 .competition-table {
+  background-color: var(--white-color);
   border-collapse: collapse;
   border: 2px solid black;
-  box-shadow: 3px 3px 4px var(--primary-alpha-color);
   text-align: center;
   width: 100%;
   margin: 50px auto 0 auto;
@@ -219,6 +239,42 @@ svg {
 margin-bottom: 2rem;
 }
 
+/*****-CONTACT-CARD-*****/
+.contact-card {
+  background-color: var(--second-color);
+  border-bottom: 4px solid var(--gray-dark-color); /*Borde solamente a la izquierda*/
+  color: var(--third-color);
+  margin: 1rem auto;
+  padding: 1rem;
+  width: 100%;
+  height: 144px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact-card > svg {
+  color: var(--white-color);
+  width: 2rem;
+  height: 2rem;
+  fill: var(--primary-color);
+}
+
+.contact-card > small {
+  margin-top: -1;
+}
+
+.social-media a {
+  padding: 0 0.4rem;
+  text-decoration: none;
+}
+
+.social-media > svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 .header {
   position: fixed;
   bottom: 0;
@@ -293,8 +349,16 @@ margin-bottom: 2rem;
   height: 100%;
 }
 
-/****************-Maquetado responsivo sección MOMENTOS-****************/
+/****************-Maquetado responsivo TABLET-****************/
 @media screen and (min-width: 768px) {
+  /*****-CONTACT-CARD-*****/
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(2,48%);
+  justify-content: space-between;
+}
+
+/*****-SECTION MOMENTS-*****/
   .moments > .container {
     /*A la div .container dentro de .momentos le agregamos display grid y lo hacemos de 2 columnas*/
     display: grid;
@@ -360,8 +424,8 @@ body section{
   width: 100%;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
   align-items: center;
   text-align: center;
   background-color: var(--hero-opacity-color);
@@ -369,7 +433,7 @@ body section{
 
 .hero-image-title {
   font-size: 7.5vw;
-  color: var(--primary-color)
+  color: var(--primary-color);
 }
 
 .bry-color{
@@ -432,6 +496,10 @@ body section{
 
 /****************-Menú Escritorio-****************/
 @media screen and (min-width: 1024px) {
+.contact-cards {
+  grid-template-columns: repeat(4, 24%);
+}
+
   .header > .container {
     border-top: 0;
     align-content: center;
