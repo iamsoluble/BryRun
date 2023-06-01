@@ -12,7 +12,7 @@
   --gray-dark-color: #5a5a5a;
   --black-color: #000000;
   --border-color: #06001A;
-  --link-color: #4da279;
+  --link-color: #ccccff;
   --title-color: #343434;
   --text-color: #232323;
   --white-alpha-color: rgba(255, 255, 255, 0.5);
@@ -44,7 +44,7 @@ body {
 
 a {
   color: var(--link-color);
-  transition: all 0.5 ease-out;
+  transition: all 0.5ms ease-out;
 }
 
 a:hover {
@@ -222,7 +222,7 @@ tr {
 
 /****************-Svg Properties (REUBICAR)-****************/
 svg {
-  width: 25px;
+  width: 20px;
   height: auto;
 }
 
@@ -232,12 +232,25 @@ svg {
 
 /****************-SITE STYLES-****************/
 .about {
-  padding-top: 2.5rem;
+  padding-top: 3rem;
 }
 
 .about > article {
 margin-bottom: 2rem;
 }
+
+
+.competences {
+  padding-top: 0.1rem;
+}
+
+.contact {
+  padding-top: 0.1rem;
+}
+.moments {
+  padding-top: 0.1rem;
+}
+
 
 /*****-CONTACT-CARD-*****/
 .contact-card {
@@ -255,25 +268,29 @@ margin-bottom: 2rem;
 }
 
 .contact-card > svg {
-  color: var(--white-color);
-  width: 2rem;
-  height: 2rem;
-  fill: var(--primary-color);
+  width: 60px;
+  height: auto;
+  fill: var(--white-color);
 }
 
 .contact-card > small {
-  margin-top: -1;
+  margin-top: -1px;
 }
 
 .social-media a {
-  padding: 0 0.4rem;
+  padding: 0 0.2rem;
   text-decoration: none;
 }
 
 .social-media > svg {
   width: 1.5rem;
   height: 1.5rem;
-}
+  }
+
+small svg{
+  margin: 0;
+  fill: var(--link-color);
+  }
 
 .header {
   position: fixed;
@@ -301,9 +318,7 @@ margin-bottom: 2rem;
   color: white;
 }
 
-.moments {
-  padding-top: 0.1rem;
-}
+
 
 
 
@@ -363,7 +378,7 @@ margin-bottom: 2rem;
     /*A la div .container dentro de .momentos le agregamos display grid y lo hacemos de 2 columnas*/
     display: grid;
     grid-template-columns: repeat(2,50%);
-    padding-top: 1rem;
+    padding-top: 3rem;
   }
     /*Al título le decimos que ocupe 2 espacios desde donde está*/
     .moments .section-title {
@@ -535,4 +550,31 @@ body section{
   .menu a:hover {
     background-color: transparent;
   }
+
+  .section {
+    max-width: 80%;
+    margin: 2rem auto 2rem auto;
+}
+
+
+.about {
+  padding-top: 3rem;
+}
+
+.about > article {
+margin-bottom: 2rem;
+}
+
+
+.competences {
+  padding-top: 3rem;
+}
+
+.contact {
+  padding-top: 3rem;
+}
+.moments {
+  padding-top: 0.1rem;
+}
+
 }
