@@ -503,21 +503,27 @@ body section{
   padding: 0;
   height: 100px;
   position: relative;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background-image: var(--gradient-text);
 }
 
+.radio-turistica {
+  padding: 0;
+  height: 100px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: var(--gradient-background);
+}
+
 .reproductor {
-  position: absolute;
-  margin: auto;
   align-self: center;
 }
+
+
 
 
 /****************-Hero Image-****************/
