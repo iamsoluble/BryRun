@@ -498,6 +498,26 @@ body section{
 }
 
 /****************-COMPONENTS-****************/
+/****************-RADIO ARAPEY-****************/
+.radio-arapey {
+  padding: 0;
+  height: 100px;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: var(--gradient-text);
+}
+
+.reproductor {
+  position: absolute;
+  margin: auto;
+  align-self: center;
+}
 
 
 /****************-Hero Image-****************/
@@ -535,7 +555,7 @@ body section{
 
 .hero-image-small {
   color: var(--third-color);
-  font-size: 1rem;
+  font-size: 1vw;
   font-style: italic;
 }
 
