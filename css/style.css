@@ -127,6 +127,7 @@ p {
 }
 
 .section {
+  width: 100vw;
   padding-left: 2rem;
   padding-right: 2rem;
 }
@@ -293,13 +294,8 @@ margin-bottom: 2rem;
 }
 
 .slide > img {
-  /*BORDE GRADIENTE*/
-  border-style: solid;
-  border-image-source: var(--gradient-border);
-  border-width: 6px;
-  border-image-slice: 1;
-  border-image-outset: 0;
-  /*---------------*/
+  border-radius: 0.7rem;
+
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -569,11 +565,11 @@ body section{
   padding: 0.8rem;
   text-align: center;
   text-decoration: none;
-  color: var(--white-alpha-color);
+  color: var(--link-color);
 }
 
 .menu a:hover {
-  color: var(--white-color);
+  color: var(--link-color);
   background-color: var(--black-alpha-color);
 }
 
@@ -607,10 +603,10 @@ body section{
     padding-top: 0;
     padding-bottom: 0.4rem;
     /*BORDE GRADIENTE*/
-  border-image-source: var(--gradient-border);
-  border-image-slice: 1;
-  border-image-width: 0 0 6px 0; /* Ancho del borde superior */
-  border-image-outset: 0;
+    border-image-source: var(--gradient-border);
+    border-image-slice: 1;
+    border-image-width: 0 0 6px 0; /* Ancho del borde superior */
+    border-image-outset: 0;
   /*---------------*/
     top: 0;
     margin: 0;
@@ -657,6 +653,13 @@ body section{
   .section {
     max-width: 80%;
     margin: 2rem auto 2rem auto;
+}
+
+ .section.moments {
+    max-width: 100%;
+    margin: 2rem auto 2rem auto;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 
