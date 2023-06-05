@@ -48,10 +48,11 @@ body {
 a {
   color: var(--link-color);
   transition: all 0.5ms ease-out;
+  opacity: 80%;
 }
 
 a:hover {
-  opacity: 0.75;
+  opacity: 100%;
 }
 
 h1 {
@@ -101,20 +102,42 @@ p {
 }
 
 .btn {
+  position: relative;
   display: inline-block;
-  border-left: 4px solid var(--primary-color); /*Borde solamente a la izquierda*/
   border-radius: 0.16rem;
   padding: 0.65rem 0rem 0.5rem 0;
   width: 150px;
   text-align: center;
   text-decoration: none;
   background-image: var(--gradient-background);
+  opacity: 100%;
 }
 
+
 .btn:hover {
-  opacity: 95%;
-  color: var(--gray-color);
+  opacity: 100%;
+  color: var(--link-color);
+  background-color: transparent;
 }
+
+
+.btn::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 0;
+  background-image: var(--gradient-text);
+  transition: width 0.2s ease-in-out;
+  opacity: 100%;
+}
+
+.btn:hover::after {
+  width: 100%;
+}
+
 
 .container {
   margin-left: auto;
@@ -264,6 +287,30 @@ svg {
 .about > article {
 margin-bottom: 2rem;
 }
+
+  /*PRUEBA ENLACES EFECTO*/
+.menu  a {
+  text-decoration: none;
+  position: relative;
+}
+
+.menu a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-image: var(--gradient-text);
+  transition: width 0.3s ease-in-out;
+}
+
+
+.menu a:hover::after {
+  width: 100%;
+}
+  /*FIN--------------PRUEBA ENLACES EFECTO*/
 
 /*CAROUSEL*/
 
@@ -460,6 +507,10 @@ small svg{
     }
 }
 
+  .hero-image-small {
+  font-size: 1.5vw;
+}
+
 
 
 /****************-Maquetado Escritorio-****************/
@@ -497,6 +548,11 @@ body section{
 
 }
 
+
+
+
+
+
 /****************-COMPONENTS-****************/
 /****************-RADIO ARAPEY-****************/
 .radio-arapey {
@@ -529,9 +585,6 @@ body section{
   padding-left: 1rem;
   font-size: 2vh;
 }
-
-
-
 
 
 /****************-Hero Image-****************/
@@ -569,7 +622,7 @@ body section{
 
 .hero-image-small {
   color: var(--third-color);
-  font-size: 1vw;
+  font-size: 2vw;
   font-style: italic;
 }
 
@@ -648,6 +701,8 @@ body section{
     width: 100%; /* Asegurarse de que el contenedor ocupa todo el ancho disponible */
   }
 
+
+
   .menu-btn {
     display: none;
   }
@@ -670,6 +725,7 @@ body section{
     pointer-events: auto;
   }
 
+
   .menu a {
     padding: 0 1rem;
     border-bottom: none;
@@ -682,6 +738,7 @@ body section{
 
   .menu a:hover {
     background-color: transparent;
+    color: var(--link-color);
   }
 
   .section {
