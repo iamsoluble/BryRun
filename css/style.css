@@ -310,6 +310,7 @@ margin-bottom: 2rem;
 .menu a:hover::after {
   width: 100%;
 }
+
   /*FIN--------------PRUEBA ENLACES EFECTO*/
 
 /*CAROUSEL*/
@@ -554,37 +555,6 @@ body section{
 
 
 /****************-COMPONENTS-****************/
-/****************-RADIO ARAPEY-****************/
-.radio-arapey {
-  padding: 0;
-  height: 100px;
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-image: var(--gradient-text);
-}
-
-.radio-turistica {
-  padding: 0;
-  height: 100px;
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-image: var(--gradient-background);
-}
-
-.reproductor-web {
-  max-width: 40vw;
-  padding-right: 1rem;
-}
-
-.radio-arapey h2,
-.radio-turistica h2 {
-  padding-left: 1rem;
-  font-size: 2vh;
-}
 
 
 /****************-Hero Image-****************/
