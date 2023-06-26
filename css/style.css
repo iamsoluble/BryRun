@@ -2,7 +2,6 @@
 :root {
   --gradient-border: radial-gradient( circle 856px at 10% 20%,  rgba(10,10,10,1) 0%, rgba(31,31,31,1) 90% );
   --gradient-text: linear-gradient( 135deg, #79F1A4 10%, #0E5CAD 100%);
-  --gradient-background: radial-gradient( circle 747px at 11.4% 53.3%,  rgba(1,3,8,1) 0%, rgba(8,15,45,1) 90% );
   --primary-color: #4d52c5;
   --primary-alpha-color: rgba(77, 82, 197, 0.75);
   --second-color: #181b24;
@@ -15,6 +14,7 @@
   --gray-dark-color: #5a5a5a;
   --black-color: #000000;
   --border-color: #06001A;
+  --text-link-hover: #ccccff;
   --link-color: #ccccff;
   --title-color: #343434;
   --text-color: #232323;
@@ -23,7 +23,15 @@
   --font: "Mona sans", sans-serif;
   --max-width: 1920px;
   --header-height: 3rem;
+  
+  /****************-GRADIENTS-****************/
+  --background-primary-light: #2c2c37;
+  --gradient-background: radial-gradient( circle 747px at 11.4% 53.3%,  rgba(1,3,8,1) 0%, rgba(8,15,45,1) 90% );
+  --gradient-background2: radial-gradient( circle 747px at 11.4% 53.3%,  rgb(0, 0, 0) 0%, rgb(1, 2, 8) 90% );
 }
+
+
+
 
 /****************-RESET-****************/
 html {
@@ -176,6 +184,48 @@ p {
   width: 100%;
   margin: 50px auto 0 auto;
 }
+
+
+/*SEPARADORES*/
+
+.separator {
+  width: 100%;
+  height: 180px;
+  padding: 0;
+}
+
+.separator-items {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  height: 100%;
+  background-image: var(--gradient-background2);
+  backdrop-filter: blur(6px);
+}
+
+.separator a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  pointer-events: none;
+}
+
+.separator-items svg {
+  fill: var(--background-primary-light);
+  margin-right: 0;
+  width: 45%;
+  
+}
+
+.separator-items svg:hover {
+  fill: var(--text-link-hover);
+  width: 48%;
+}
+
+
+
+
 
 @media screen and (max-width: 600px) { /* Ajustar para pantallas con menos de 600px de ancho */
   .competition-table {
@@ -717,7 +767,7 @@ body section{
 }
 
  .section.moments {
-    max-width: 100%;
+    max-width: 80%;
     margin: 2rem auto 2rem auto;
     padding-left: 0;
     padding-right: 0;
